@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+.container {
+  background-color: hsl(0, 0%, 98%);
+  padding: 5rem 5rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-weight: 200;
+  font-size: 3rem;
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.8;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1 1fr);
+  gap: 1.5rem;
+}
+
+.each-div {
+  padding: 1.5rem 3rem;
+  box-shadow: 0 0 6px hsl(180, 62%, 55%, 0.15);
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1.5rem;
+  /* max-width: 80rem;
+    margin: auto; */
+}
+
+.each-div h3 {
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 2rem;
+  font-size: 1;
+}
+
+.each-div p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: hsl(229, 6%, 66%);
+  opacity: 80%;
+  letter-spacing: 0.4px;
+  margin-bottom: 3rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: right;
+}
+
+.grid-1 {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.grid-2 {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.grid-3 {
+  border-top: 5px solid hsl(34, 97%, 64%);
+  min-width: 40.5rem;
+}
+
+.grid-4 {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+/*****************************************/
+/* MEDIA QUERY */
+/*****************************************/
+
+/*****************************************/
+/* above 800px */
+/*****************************************/
+
+@media (min-width: 62rem) {
+  .header {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header h2 {
+    font-size: 2.5rem;
+  }
+
+  .grid-container {
+    max-width: 140rem;
+    padding: 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "start mid1 end"
+      "start mid2 end";
+    gap: 3rem;
+  }
+
+  .each-div {
+    max-width: 120rem;
+    margin: auto;
+  }
+
+  .grid-1 {
+    grid-area: start;
+    align-self: center;
+  }
+
+  .grid-2 {
+    grid-area: mid1;
+  }
+
+  .grid-3 {
+    grid-area: mid2;
+  }
+
+  .grid-4 {
+    grid-area: end;
+    align-self: center;
+  }
+
+  .attribution {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .attribution a {
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+  }
+}
